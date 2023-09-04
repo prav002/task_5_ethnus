@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="submit.php" method="POST">
+        <table>
+            <tr>
+                <td><label for="fullname">Full Name:</label></td>
+                <td><input type="text" id="fullname" name="fullname" required></td>
+            </tr>
+            <tr>
+                <td><label for="username">Username:</label></td>
+                <td><input type="text" id="username" name="username" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="repassword">Re-enter Password:</label></td>
+                <td><input type="password" id="repassword" name="repassword" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="number" id="age" name="age" required></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Languages Known:</label></td>
+                <td>
+                    <input type="checkbox" id="english" name="languages[]" value="English">
+                    <label for="english">English</label><br>
+                    <input type="checkbox" id="spanish" name="languages[]" value="Spanish">
+                    <label for="spanish">Spanish</label><br>
+                    <input type="checkbox" id="french" name="languages[]" value="French">
+                    <label for="french">French</label><br>
+                    <!-- Add more languages as needed -->
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
